@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dfd74de-acc1-42a0-b05e-41679ab6234f" name="Default Changelist" comment="" />
+    <list default="true" id="5dfd74de-acc1-42a0-b05e-41679ab6234f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YfJEGOeoZ0HzptvntSFSHZzPwd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -30,7 +39,7 @@
       <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dfcreate">
+  <component name="RunManager" selected="Python.soa_heatmap">
     <configuration name="dfcreate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="charttests" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,8 +176,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.dfcreate" />
         <item itemvalue="Python.soa_heatmap" />
+        <item itemvalue="Python.dfcreate" />
         <item itemvalue="Python.soavals" />
       </list>
     </recent_temporary>
@@ -218,42 +227,46 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state width="1280" height="438" key="DebuggerActiveHint/0.23.1280.709@0.23.1280.709" timestamp="1583745533580" />
-    <state width="1259" height="218" key="GridCell.Tab.0.bottom" timestamp="1584005799735">
+    <state width="1259" height="218" key="GridCell.Tab.0.bottom" timestamp="1584009793904">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1584005799735" />
-    <state width="1259" height="218" key="GridCell.Tab.0.center" timestamp="1584005799733">
+    <state width="1259" height="218" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1584009793904" />
+    <state width="1259" height="218" key="GridCell.Tab.0.center" timestamp="1584009793903">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1584005799733" />
-    <state width="1259" height="218" key="GridCell.Tab.0.left" timestamp="1584005799732">
+    <state width="1259" height="218" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1584009793903" />
+    <state width="1259" height="218" key="GridCell.Tab.0.left" timestamp="1584009793903">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1584005799732" />
-    <state width="1259" height="218" key="GridCell.Tab.0.right" timestamp="1584005799734">
+    <state width="1259" height="218" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1584009793903" />
+    <state width="1259" height="218" key="GridCell.Tab.0.right" timestamp="1584009793904">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1584005799734" />
-    <state width="1259" height="218" key="GridCell.Tab.1.bottom" timestamp="1584005799739">
+    <state width="1259" height="218" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1584009793904" />
+    <state width="1259" height="218" key="GridCell.Tab.1.bottom" timestamp="1584009793906">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1584005799739" />
-    <state width="1259" height="218" key="GridCell.Tab.1.center" timestamp="1584005799737">
+    <state width="1259" height="218" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1584009793906" />
+    <state width="1259" height="218" key="GridCell.Tab.1.center" timestamp="1584009793905">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1584005799737" />
-    <state width="1259" height="218" key="GridCell.Tab.1.left" timestamp="1584005799737">
+    <state width="1259" height="218" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1584009793905" />
+    <state width="1259" height="218" key="GridCell.Tab.1.left" timestamp="1584009793905">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1584005799737" />
-    <state width="1259" height="218" key="GridCell.Tab.1.right" timestamp="1584005799738">
+    <state width="1259" height="218" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1584009793905" />
+    <state width="1259" height="218" key="GridCell.Tab.1.right" timestamp="1584009793905">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state width="1259" height="218" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1584005799738" />
-    <state x="272" y="23" width="982" height="709" key="SettingsEditor" timestamp="1584006583818">
+    <state width="1259" height="218" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1584009793905" />
+    <state x="266" y="23" width="900" height="709" key="SettingsEditor" timestamp="1584009110894">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
-    <state x="272" y="23" width="982" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1584006583818" />
+    <state x="266" y="23" width="900" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1584009110894" />
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2" timestamp="1584009718657">
+      <screen x="0" y="23" width="1280" height="709" />
+    </state>
+    <state x="240" y="119" key="Vcs.Push.Dialog.v2/0.23.1280.709@0.23.1280.709" timestamp="1584009718657" />
     <state width="631" height="354" key="XDebugger.FullValuePopup" timestamp="1584004888815">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
