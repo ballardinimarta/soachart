@@ -40,9 +40,7 @@ fig.update_layout(
     plot_bgcolor='white',
     xaxis=dict(
         title="Time",
-        rangeslider=dict(visible=True, thickness=0.10),
-        #nticks=20,
-
+        rangeslider=dict(visible=True, thickness=0.10)
     ),
     yaxis=dict(
         title="Server",

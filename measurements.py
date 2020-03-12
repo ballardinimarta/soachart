@@ -1,5 +1,6 @@
 # IPv4 Measurements for every nameserver from starttime - stoptime
 
+# To change timeframe for the chart, change these values.
 # 03/09-2020 03.00
 starttime = 1583719200
 # 03/09-2020 06.00
@@ -75,5 +76,3 @@ kwargs_z = {
     "start": starttime,
     "stop": stoptime
 }
-
-
