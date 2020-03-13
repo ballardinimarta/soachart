@@ -18,7 +18,7 @@ def create_list(kwargs):
             if not my_error.is_error:
                 timestamp = results[count]['timestamp']
                 timestamp = datetime.datetime.fromtimestamp(timestamp)
-                timestamp = timestamp.strftime("%H:%M")
+                #timestamp = timestamp.strftime("%H:%M:%S")
                 soa_serial = results[count]['result']['answers'][0]['SERIAL']
                 l_soa.append(soa_serial)
                 l_time.append(timestamp)
@@ -44,3 +44,4 @@ all_time_list = [a[1], b[1], c[1], f[1], g[1], i[1], x[1], y[1], z[1]]
 # setting colorbar tick values
 for item in all_soa_list:
     unique = np.unique(item)
+
