@@ -3,7 +3,7 @@ from ripe.atlas.sagan import DnsResult
 from measurements import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwargs_i, kwargs_x, kwargs_y, kwargs_z
 import datetime
 import numpy as np
-from sklearn import preprocessing
+
 
 # Function that parses the results for a measurement and puts the soaserial and timestamp in 2 lists and then returns
 # those lists
@@ -45,7 +45,10 @@ all_time_list = [a[1], b[1], c[1], f[1], g[1], i[1], x[1], y[1], z[1]]
 for item in all_soa_list:
     unique = np.unique(item)
 
+
 # Setting average datetime values
+for i in all_time_list:
+    i.sort()
 av = [float(sum(l)) / len(l) for l in zip(*all_time_list)]
 timelist = []
 for x in av:

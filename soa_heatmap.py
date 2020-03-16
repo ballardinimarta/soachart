@@ -1,7 +1,10 @@
 import plotly.graph_objects as go
 import datetime
-from listcreate import all_soa_list, unique, timelist
+from listcreate import all_soa_list, unique, all_time_list, timelist
 import numpy as np
+
+for i in all_soa_list:
+    i.sort()
 
 # Define z, x and y values
 servers = ['a.ns.se', 'b.ns.se', 'c.ns.se', 'f.ns.se', 'g.ns.se', 'i.ns.se','x.ns.se', 'y.ns.se', 'z.ns.se']
