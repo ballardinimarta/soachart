@@ -1,28 +1,29 @@
 import plotly.graph_objects as go
 import datetime
-from listcreate import all_soa_list, unique, all_time_list, timelist
+from listcreate import unique, all_soa_list, all_dt_list, timelist
 import numpy as np
-
 for i in all_soa_list:
     i.sort()
 
 # Define z, x and y values
 servers = ['a.ns.se', 'b.ns.se', 'c.ns.se', 'f.ns.se', 'g.ns.se', 'i.ns.se','x.ns.se', 'y.ns.se', 'z.ns.se']
-time = timelist
 z = all_soa_list
+time = timelist
+custom = all_dt_list
 
 # Creating plot, making a custom hovertemplate for the hovertext and editing the colorbar
 fig = go.Figure(data=go.Heatmap(
     z=z,
     x=time,
     y=servers,
+    customdata=custom,
     ygap=10,
     colorscale='viridis',
     xgap=0,
     hovertemplate=
     "<b>'SOA zones for .se'</b><br><br>" +
     "Server: %{y}<br><br>" +
-    "Time: %{x}<br><br>" +
+    "Time: %{customdata}<br><br>" +
     "Soa Zone: %{z:" "}" +
     "<extra></extra>",
     colorbar=dict(
@@ -38,7 +39,10 @@ fig = go.Figure(data=go.Heatmap(
 # Updating some layout values
 fig.update_layout(
     title="SOA zones for .se",
-    hoverlabel=dict(bgcolor='green', bordercolor='black'),
+    hoverlabel=dict(bgcolor='black', bordercolor='black',font=dict(
+        family="arial",
+        color="white")
+    ),
     plot_bgcolor='white',
     xaxis=dict(
         title="Time",
@@ -52,6 +56,6 @@ fig.update_layout(
     font=dict(
         family="arial",
         size=13,
-        color="Black"))
+        color="black"))
 # Display the plot
 fig.show()
