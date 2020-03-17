@@ -18,13 +18,13 @@ fig = go.Figure(data=go.Heatmap(
     y=servers,
     customdata=custom,
     ygap=10,
-    colorscale='viridis',
+    colorscale='portland',
     xgap=0,
     hovertemplate=
-    "<b>'SOA zones for .se'</b><br><br>" +
-    "Server: %{y}<br><br>" +
-    "Time: %{customdata}<br><br>" +
-    "Soa Zone: %{z:" "}" +
+    "<b>SOA zones for .se</b><br><br>" +
+    "<b>Server:</b> %{y}<br><br>" +
+    "<b>Time:</b> %{customdata}<br><br>" +
+    "<b>Soa Zone:</b> %{z:" "}" +
     "<extra></extra>",
     colorbar=dict(
         showtickprefix="none",
@@ -38,6 +38,7 @@ fig = go.Figure(data=go.Heatmap(
 )
 # Updating some layout values
 fig.update_layout(
+    template="ggplot2",
     title="SOA zones for .se",
     hoverlabel=dict(bgcolor='black', bordercolor='black',font=dict(
         family="arial",
@@ -56,6 +57,10 @@ fig.update_layout(
     font=dict(
         family="arial",
         size=13,
-        color="black"))
+        color="black")
+    )
 # Display the plot
 fig.show()
+
+# Write HTML file
+#fig.write_html("path/to/file.html")
