@@ -1,14 +1,14 @@
 import plotly.graph_objects as go
 import datetime
-from listcreate import unique, all_soa_list, all_dt_list, timelist, colorscale, all_time_list
+from listcreate import unique, all_soa_list, all_dt_list, timelist, all_time_list, ticktext, tickvals
 import numpy as np
-from parser import some_soa_list, some_time_list, all_tuple_list, colorticks
 for i in all_soa_list:
     i.sort()
 
+hov = ticktext
 colorvals=np.array(list(range(len(unique))))
 # Define z, x and y values
-servers = ['a.ns.se', 'b.ns.se', 'c.ns.se', 'f.ns.se', 'g.ns.se', 'i.ns.se','x.ns.se', 'y.ns.se', 'z.ns.se']
+servers = ['a.ns.se', 'b.ns.se', 'c.ns.se', 'f.ns.se', 'g.ns.se', 'i.ns.se', 'm.ns.se', 'x.ns.se', 'y.ns.se', 'z.ns.se']
 z = all_soa_list
 time = timelist
 custom = all_time_list
@@ -19,24 +19,21 @@ fig = go.Figure(data=go.Heatmap(
     x=timelist,
     y=servers,
     customdata=custom,
-    zmax=unique[-1],
-    zmin=unique[0],
     ygap=10,
     colorscale='portland',
     xgap=0,
     hovertemplate=
     "<b>SOA zones for .se</b><br><br>" +
     "<b>Server:</b> %{y}<br><br>" +
-    "<b>Time:</b> %{x}<br><br>" +
-    "<b>Soa Zone:</b> %{z:" "}" +
+    "<b>Time:</b> %{customdata}<br><br>" +
+    "<b>Soa Zone:</b> %{}" +
     "<extra></extra>",
     colorbar=dict(
         showtickprefix="none",
         thickness=15,
-        tickformat="",
         tickmode='array',
-        tickvals=colorvals,
-        ticktext=unique,
+        tickvals=tickvals,
+        ticktext=ticktext,
     )
 )
 )
@@ -44,10 +41,6 @@ fig = go.Figure(data=go.Heatmap(
 fig.update_layout(
     template="ggplot2",
     title="SOA zones for .se",
-    hoverlabel=dict(bgcolor='black', bordercolor='black',font=dict(
-        family="arial",
-        color="white")
-    ),
     plot_bgcolor='white',
     xaxis=dict(
         title="Time",
@@ -88,4 +81,5 @@ fig.update_layout(
 fig.show()
 
 # Write HTML file
-#fig.write_html("path/to/file.html")
+#fig.write_html('/Users/marta.ballardini/Desktop/plot.html')
+    #("path/to/file.html")

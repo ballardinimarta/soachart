@@ -1,10 +1,10 @@
 # IPv4 Measurements for every nameserver from starttime - stoptime
 
 # To change timeframe for the chart, change these values.
-# 03/19/2020 @ 23:00
-starttime = 1584655200
-# 03/20/2020 @ 03:00
-stoptime = 1584669600
+# 03/22/2020 @ 00:00
+starttime = 1584831600
+# 03/22/2020 @ 12:00
+stoptime = 1584874800
 
 #a.ns.se
 #/api/v2/measurements/1413717/results/?start=1584241200&stop=1584248400&format=json
@@ -50,6 +50,13 @@ kwargs_g = {
 #/api/v2/measurements/1413697/results/?start=1583712000&stop=1583715600&format=json
 kwargs_i = {
     "msm_id": 1413697,
+    "start": starttime,
+    "stop": stoptime
+}
+#m.ns.se
+#/api/v2/measurements/24057751/results/?start=1584921600&stop=1585007999&format=json
+kwargs_m ={
+    "msm_id":24057751,
     "start": starttime,
     "stop": stoptime
 }
