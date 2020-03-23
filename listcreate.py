@@ -19,7 +19,7 @@ def create_list(kwargs):
             if not my_error.is_error:
                 timestamp = results[count]['timestamp']
                 dt = datetime.datetime.fromtimestamp(timestamp)
-                dt = dt.strftime("%m/%d/%Y , %H:%M:%S")
+                #dt = dt.strftime("%m/%d/%Y , %H:%M:%S")
                 soa_serial = results[count]['result']['answers'][0]['SERIAL']
                 l_soa.append(soa_serial)
                 l_time.append(timestamp)
@@ -48,12 +48,29 @@ all_dt_list = [a[2], b[2], c[2], f[2], g[2], i[2], x[2], y[2], z[2]]
 for item in all_soa_list:
     unique = np.unique(item)
 
-
 # Setting average datetime values
-for i in all_time_list:
-    i.sort()
+for s in all_time_list:
+    s.sort()
 av = [float(sum(l)) / len(l) for l in zip(*all_time_list)]
 timelist = []
-for x in av:
-    dt = datetime.datetime.fromtimestamp(x)
+for count in av:
+    dt = datetime.datetime.fromtimestamp(count)
     timelist.append(dt)
+
+# colorscale colors
+colorscale = [
+    [0, 'red'],
+    [0.14285714285, 'red'],
+    [0.14285714285, 'green'],
+    [0.28571428571, 'green'],
+    [0.28571428571, 'blue'],
+    [0.42857142857, 'blue'],
+    [0.42857142857, 'orange'],
+    [0.57142857142, 'orange'],
+    [0.57142857142, 'gray'],
+    [0.71428571428, 'gray'],
+    [0.71428571428, 'yellow'],
+    [0.85714285714,'yellow'],
+    [0.85714285714,'pink'],
+    [1,'pink']
+]
