@@ -42,7 +42,7 @@ fig = go.Figure(data=go.Heatmap(
 # Updating some layout values
 fig.update_layout(
     template="ggplot2",
-    title="SOA zones for .se",
+    title="SOA zones for .se secondary name servers",
     plot_bgcolor='white',
     xaxis=dict(
         title="Time",
