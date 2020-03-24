@@ -24,9 +24,13 @@ fig = go.Figure(data=go.Heatmap(
     "<b>SOA zones for .se</b><br><br>" +
     "<b>Server:</b> %{y}<br><br>" +
     "<b>Time:</b> %{customdata}<br><br>" +
-    "<b>Soa Zone:</b> %{z:""}" +
     "<extra></extra>",
     colorbar=dict(
+        title='<b>SOA Zone<b>',
+        tickfont=dict(
+        family="arial",
+        size=10,
+        color="black"),
         showtickprefix="none",
         thickness=15,
         tickmode='array',
