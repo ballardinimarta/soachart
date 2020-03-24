@@ -1,32 +1,30 @@
 import plotly.graph_objects as go
-import datetime
-from listcreate import unique, all_soa_list, all_dt_list, timelist, all_time_list, ticktext, tickvals
-import numpy as np
+from listcreate import all_soa_list, all_dt_list, timelist, ticktext, tickvals
+
+
+# Sorting soa values
 for i in all_soa_list:
     i.sort()
 
-hov = ticktext
-colorvals=np.array(list(range(len(unique))))
-# Define z, x and y values
+# Define z, x, y and customdata values
 servers = ['a.ns.se', 'b.ns.se', 'c.ns.se', 'f.ns.se', 'g.ns.se', 'i.ns.se', 'm.ns.se', 'x.ns.se', 'y.ns.se', 'z.ns.se']
 z = all_soa_list
 time = timelist
-custom = all_time_list
+custom = all_dt_list
 
 # Creating plot, making a custom hovertemplate for the hovertext and editing the colorbar
 fig = go.Figure(data=go.Heatmap(
-    z=all_soa_list,
-    x=timelist,
+    z=z,
+    x=time,
     y=servers,
     customdata=custom,
     ygap=10,
     colorscale='portland',
-    xgap=0,
     hovertemplate=
     "<b>SOA zones for .se</b><br><br>" +
     "<b>Server:</b> %{y}<br><br>" +
     "<b>Time:</b> %{customdata}<br><br>" +
-    "<b>Soa Zone:</b> %{}" +
+    "<b>Soa Zone:</b> %{z:""}" +
     "<extra></extra>",
     colorbar=dict(
         showtickprefix="none",
@@ -75,11 +73,13 @@ fig.update_layout(
     font=dict(
         family="arial",
         size=13,
-        color="black")
+        color="black"),
+    hoverlabel= dict(
+        bgcolor='Black'
+    )
     )
 # Display the plot
 fig.show()
 
 # Write HTML file
-#fig.write_html('/Users/marta.ballardini/Desktop/plot.html')
-    #("path/to/file.html")
+#fig.write_html("path/to/file.html")

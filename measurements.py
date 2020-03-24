@@ -4,7 +4,7 @@
 # 03/22/2020 @ 00:00
 starttime = 1584831600
 # 03/22/2020 @ 12:00
-stoptime = 1584874800
+stoptime = 1584842400
 
 #a.ns.se
 #/api/v2/measurements/1413717/results/?start=1584241200&stop=1584248400&format=json

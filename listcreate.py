@@ -3,7 +3,6 @@ from ripe.atlas.sagan import DnsResult
 from measurements import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwargs_i, kwargs_m, kwargs_x, kwargs_y, kwargs_z
 import datetime
 import numpy as np
-import pandas as pd
 
 # Function that parses the results for a measurement and puts the soaserial and timestamp in 2 lists and then an
 # additional list for the timestamps in datetimeformat and then returns those lists
@@ -19,7 +18,7 @@ def create_list(kwargs):
             if not my_error.is_error:
                 timestamp = results[count]['timestamp']
                 dt = datetime.datetime.fromtimestamp(timestamp)
-                #dt = dt.strftime("%m/%d/%Y , %H:%M:%S")
+                dt = dt.strftime("%m/%d/%Y , %H:%M:%S")
                 soa_serial = results[count]['result']['answers'][0]['SERIAL']
                 soa_serial = str(soa_serial)
                 soa_serial = datetime.datetime.strptime(soa_serial, "%Y%m%d%H")
