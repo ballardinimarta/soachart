@@ -41,5 +41,25 @@ $ python3 soa_heatmap.py
 ```
 
 ## Output
-After running the script it will first print some warnings, and then the chart should pop up in your browser.
+After running the script it will first print some warnings, and then the chart should pop up in your browser. 
 
+### Output as HTML file
+Or if you want the chart as a HTML file you can remove the hashtag from the comment on the last line in soa_heatmap.py, on default if you clone the code will look like this
+```
+# Display the plot
+fig.show()
+
+# Write HTML file
+#fig.write_html("path/to/file.html")
+
+```
+So if you want the HTML file you change it to
+```
+# Display the plot
+#fig.show()
+
+# Write HTML file
+fig.write_html("path/to/file.html")
+
+```
+Then change the path to where you would like to have it and the name of the file.
