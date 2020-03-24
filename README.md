@@ -41,7 +41,11 @@ $ python3 soa_heatmap.py
 ```
 
 ## Output
-After running the script it will first print some warnings, and then the chart should pop up in your browser. 
+After running the script it will first print some warnings, and then the chart should pop up in your browser. The warnings you get are not a problem at all just the lost data if its all good the warnings that are printed should look like this 
+```
+WARNING:root:Timeout: 5000
+```
+After these are printed your graph pops up in your browser.
 
 ### Output as HTML file
 Or if you want the chart as a HTML file you can remove the hashtag from the comment on the last line in soa_heatmap.py, on default if you clone the code will look like this
