@@ -13,12 +13,6 @@ Go to the repos directory
 $ cd soachart
 ```
 
-Activate venv
-
-```bash
-$ source venv/bin/activate
-```
-
 Install requirements.txt
 
 ```bash
