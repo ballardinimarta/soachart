@@ -1,7 +1,6 @@
 import plotly.graph_objects as go
-from soa_chart_24.listcreate_24 import all_soa_list, all_dt_list, timelist, ticktext, tickvals
-from soa_chart_24.listcreate_24 import colorscale
-
+from listcreate_24 import all_soa_list, all_dt_list, timelist, ticktext, tickvals
+from listcreate_24 import colorscale
 
 
 # Sorting soa values

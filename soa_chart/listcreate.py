@@ -1,6 +1,6 @@
 from ripe.atlas.cousteau import AtlasResultsRequest
 from ripe.atlas.sagan import DnsResult
-from soa_chart.measurements import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwargs_i, kwargs_m, kwargs_x, kwargs_y, kwargs_z
+from measurements import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwargs_i, kwargs_m, kwargs_x, kwargs_y, kwargs_z
 import datetime
 import numpy as np
 

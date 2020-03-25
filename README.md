@@ -33,7 +33,7 @@ The times are set in unix timestamps.
 ## How to run
 To run the chart use:
 ```bash
-$ python3 soa_heatmap.py
+$ python3 soa_chart/soa_heatmap.py
 ```
 
 ## Output
@@ -65,7 +65,7 @@ Then change the path to where you would like to have it and the name of the file
 ## How to run
 To run the chart use:
 ```bash
-$ python3 soa_heatmap_24.py
+$ python3 soa_chart_24/soa_heatmap_24.py
 ```
 
 ## Output

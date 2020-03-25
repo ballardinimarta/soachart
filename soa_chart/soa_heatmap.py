@@ -1,5 +1,5 @@
 import plotly.graph_objects as go
-from soa_chart.listcreate import all_soa_list, all_dt_list, timelist, ticktext, tickvals
+from listcreate import all_soa_list, all_dt_list, timelist, ticktext, tickvals
 
 
 # Sorting soa values
