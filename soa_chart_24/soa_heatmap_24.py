@@ -1,5 +1,7 @@
 import plotly.graph_objects as go
-from listcreate import all_soa_list, all_dt_list, timelist, ticktext, tickvals
+from soa_chart_24.listcreate_24 import all_soa_list, all_dt_list, timelist, ticktext, tickvals
+from soa_chart_24.listcreate_24 import colorscale
+
 
 
 # Sorting soa values
@@ -19,7 +21,7 @@ fig = go.Figure(data=go.Heatmap(
     y=servers,
     customdata=custom,
     ygap=10,
-    colorscale='portland',
+    colorscale=colorscale,
     hovertemplate=
     "<b>SOA zones for .se</b><br><br>" +
     "<b>Server:</b> %{y}<br><br>" +
