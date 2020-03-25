@@ -4,6 +4,7 @@ from measurements import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwarg
 import datetime
 import numpy as np
 
+
 # Function that parses the results for a measurement and puts the soaserial and timestamp in 2 lists and then an
 # additional list for the timestamps in datetimeformat and then returns those lists
 def create_list(kwargs):
@@ -14,7 +15,7 @@ def create_list(kwargs):
         l_dt = []
         count = 0
         while count < len(results)-1:
-            my_error = DnsResult(results[count])
+            my_error = DnsResult(results[count], on_error=DnsResult.ACTION_IGNORE)
             if not my_error.is_error:
                 timestamp = results[count]['timestamp']
                 dt = datetime.datetime.fromtimestamp(timestamp)
