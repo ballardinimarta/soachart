@@ -69,10 +69,10 @@ $ python3 soa_heatmap_24.py
 ```
 
 ## Output
-After running the script the chart should pop up in your browser.
+After running the script the chart should pop up in your browser. This script can take a bit longer to run because of the larger sets of measurementdata.
 
 ### Output as HTML file
-Or if you want the chart as a HTML file you can remove the hashtag from the comment on the last line in soa_heatmap.py, on default if you clone the code will look like this
+Or if you want the chart as a HTML file you can remove the hashtag from the comment on the last line in soa_heatmap_24.py, on default if you clone the code will look like this
 ```
 # Display the plot
 fig.show()
