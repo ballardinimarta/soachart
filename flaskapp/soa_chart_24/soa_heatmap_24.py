@@ -1,9 +1,31 @@
 import plotly.graph_objects as go
 from listcreate_24 import all_soa_list, all_dt_list, timelist, ticktext, tickvals
 from listcreate_24 import colorscale
+import argparse
+import datetime
 
 
-# Sorting soa values
+'''# Adding argparse for rangeselection
+my_parser = argparse.ArgumentParser()
+my_parser.add_argument('date',
+                       help='Choose time for rendering by typing'
+                            '"yyyy-mm-dd hh:mm:ss"',
+                       type=str,
+                       nargs=2,
+                       default='')
+my_parser.add_argument('starttime',
+                       help='Choose time for rendering by typing'
+                            '"yyyy-mm-dd hh:mm:ss"',
+                       type=str,
+                       nargs=1,
+                       default= stoptime - datetime.timedelta(hours=24))
+my_parser.add_argument('stoptime',
+                       help='Choose time for rendering by typing'
+                            '"yyyy-mm-dd hh:mm:ss"',
+                       type=str,
+                       nargs=1,
+                       default=datetime.datetime.now())
+'''# Sorting soa values
 for i in all_soa_list:
     i.sort()
 
@@ -25,6 +47,7 @@ fig = go.Figure(data=go.Heatmap(
     "<b>SOA zones for .se</b><br><br>" +
     "<b>Server:</b> %{y}<br><br>" +
     "<b>Time:</b> %{customdata}<br><br>" +
+    "<b>Soa zone:</b> %{z}<br><br>"
     "<extra></extra>",
     colorbar=dict(
         title='<b>SOA Zone<b>',
@@ -84,7 +107,7 @@ fig.update_layout(
     )
     )
 # Display the plot
-fig.show()
+#fig.show()
 
 # Write HTML file
-#fig.write_html("path/to/file.html")
+fig.write_html("path/to/file.html")
