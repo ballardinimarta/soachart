@@ -1,8 +1,9 @@
 from ripe.atlas.cousteau import AtlasResultsRequest
 from ripe.atlas.sagan import DnsResult
-from measurements_24 import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwargs_i, kwargs_m, kwargs_x, kwargs_y, kwargs_z
+from soa_chart_24.measurements_24 import kwargs_a, kwargs_b, kwargs_c, kwargs_f, kwargs_g, kwargs_i, kwargs_m, kwargs_x, kwargs_y, kwargs_z
 import datetime
 import numpy as np
+
 
 
 # Function that parses the results for a measurement and puts the soaserial and timestamp in 2 lists and then an
@@ -32,16 +33,16 @@ def create_list(kwargs):
 
 
 # Create a time list, soa list and datetime list for each measurement
-a = create_list(kwargs_a)
-b = create_list(kwargs_b)
-c = create_list(kwargs_c)
-f = create_list(kwargs_f)
-g = create_list(kwargs_g)
-i = create_list(kwargs_i)
-m = create_list(kwargs_m)
-x = create_list(kwargs_x)
-y = create_list(kwargs_y)
-z = create_list(kwargs_z)
+a = create_list(list_kwargs[0])
+b = create_list(list_kwargs[1])
+c = create_list(list_kwargs[2])
+f = create_list(list_kwargs[3])
+g = create_list(list_kwargs[4])
+i = create_list(list_kwargs[5])
+m = create_list(list_kwargs[6])
+x = create_list(list_kwargs[7])
+y = create_list(list_kwargs[8])
+z = create_list(list_kwargs[9])
 
 # Making a combined time/soa/datetime list for all servers
 all_soa_list = [a[0], b[0], c[0], f[0], g[0], i[0], m[0], x[0], y[0], z[0]]

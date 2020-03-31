@@ -1,10 +1,7 @@
 # IPv4 Measurements for every nameserver from starttime - stoptime
-import datetime
 
-
-stoptime = datetime.datetime.now()
-starttime = stoptime - datetime.timedelta(hours=24)
-
+#starttime = make_graph(starttime)
+#stoptime = make_graph(stoptime)
 #a.ns.se
 #/api/v2/measurements/1413717/results/?start=1584241200&stop=1584248400&format=json
 kwargs_a = {
