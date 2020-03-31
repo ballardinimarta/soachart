@@ -1,35 +1,30 @@
-from flask import Flask, render_template, redirect, url_for, flash, request
+from flask import Flask
+from flask_bootstrap import Bootstrap
+from datetime import datetime, timedelta
+from flask import render_template, redirect, url_for, flash, request
 from flask_wtf import Form
 from wtforms.fields import DateTimeField, SubmitField
-from flask_bootstrap import Bootstrap
-from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime, timedelta
 
 app = Flask(__name__)
 Bootstrap(app)
 app.secret_key = 'SHH!'
 
-from soa_chart_24.soa_heatmap_24 import make_graph
-
 now_time = datetime.now()
-defstarttime = now_time - timedelta(hours=24)
+defstarttime = datetime.now() - timedelta(hours=24)
 
 
 class dateform(Form):
-    start = DateTimeField(id = 'startpick', format='%m/%d/%Y %H:%M %p')
-    stop =DateTimeField(id = 'stoppick', format='%m/%d/%Y %H:%M %p')
+    start = DateTimeField(id = 'startpick',  format = '%Y-%m-%d %H:%M',
+                            default = defstarttime)
+    stop =DateTimeField(id = 'stoppick',  format = '%Y-%m-%d %H:%M',
+                            default = datetime.now)
     submit = SubmitField('Submit')
-
-class defaultform(Form):
-    default = SubmitField('Default')
-
 
 
 @app.route("/", methods=['POST', 'GET'])
 def home():
     error = None
     date_form = dateform()
-    default_form = defaultform()
     if date_form.validate_on_submit():
         if date_form.start.data == date_form.stop.data:
             error ='starttime and stoptime cannot be the same time'
@@ -37,23 +32,20 @@ def home():
             error ='the stoptime has to be later than the starttime'
         elif date_form.stop.data > now_time:
             error ='stoptime cannot be later than the current date and time'
+        elif date_form.stop.data-date_form.start.data>timedelta(hours=24):
+            error ='the measurement cannot be larger than 24 hours'
         else:
-            print(make_graph(date_form.start.data, date_form.stop.data))
-            return redirect(url_for('soa'))
-    if default_form.validate_on_submit():
-        if default_form.default.data:
-            print(make_graph(defstarttime, now_time))
+            get_plot(date_form.start.data, date_form.stop.data)
             return redirect(url_for('soa'))
 
-
-
-    return render_template('index.html', date_form=date_form, default_form=default_form, error=error)
+    return render_template('index.html', date_form=date_form, error=error)
 
 
 @app.route("/soa")
 def soa():
     return render_template('soa.html')
 
+from soa_chart_24.func import get_plot
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,27 +1,27 @@
 # soachart
-A heatmap that displays soa zones for .se servers. 
+A heatmap that displays soa zones for .se servers.
 
 ## How to set up
 Start by cloning my repo.
 
-```bash
+``` bash
 $ git clone https://github.com/ballardinimarta/soachart.git
 ```
-Go to the repos directory 
+Go to the repos directory
 
-```bash
+``` bash
 $ cd soachart
 ```
 
 Install requirements.txt
 
-```bash
+``` bash
 $ pip install -r requirements.txt
-``` 
+```
 
 # For soa chart with adjustable time
 ## Set the time
-If you want to see the chart from a specific timeframe, go to measurements.py and change 'starttime' and 'stoptime'. Default in my code is 
+If you want to see the chart from a specific timeframe, go to measurements.py and change 'starttime' and 'stoptime'. Default in my code is
 ```
 # 03/09-2020 03.00
 starttime = 1583719200
@@ -32,7 +32,7 @@ The times are set in unix timestamps.
 
 ## How to run
 To run the chart use:
-```bash
+``` bash
 $ python3 soa_chart/soa_heatmap.py
 ```
 
@@ -60,34 +60,32 @@ fig.write_html("path/to/file.html")
 ```
 Then change the path to where you would like to have it and the name of the file.
 
-# For a soachart for the last 24 hours
+# For a flask application of the soachart with a timerangeselector
 
+## How to host the Flask application on your localhost
+
+When you are in the working directory and have activated the venv go to terminal and set
+
+``` bash
+$ export FLASK_APP=flaskapp/app.py
+```
 ## How to run
-To run the chart use:
-```bash
-$ python3 soa_chart_24/soa_heatmap_24.py
-```
 
+and then you just do a flask run to connect to the server
+``` bash
+$ flask run
+```
 ## Output
-After running the script the chart should pop up in your browser. This script can take a bit longer to run because of the larger sets of measurementdata.
-
-### Output as HTML file
-Or if you want the chart as a HTML file you can remove the hashtag from the comment on the last line in soa_heatmap_24.py, on default if you clone the code will look like this
+The output from the flask run command should be
+``` bash
+$ flask run
+* Serving Flask app "flaskapp/app.py"
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
-# Display the plot
-fig.show()
+__Then the application should be visible at http://127.0.0.1:5000/ .__
 
-# Write HTML file
-#fig.write_html("path/to/file.html")
-
-```
-So if you want the HTML file you change it to
-```
-# Display the plot
-#fig.show()
-
-# Write HTML file
-fig.write_html("path/to/file.html")
-
-```
-Then change the path to where you would like to have it and the name of the file.
+#### Goodluck! :+1:
