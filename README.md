@@ -61,6 +61,13 @@ fig.write_html("path/to/file.html")
 Then change the path to where you would like to have it and the name of the file.
 
 # For a flask application of the soachart with a timerangeselector
+## Some path config
+At the last line in func.py that is under soachart/flaskapp/soa_chart_24/func.py you will se the line
+```    
+fig.write_html("<path to your directory>/soachart/flaskapp/templates/soagraph.html")
+```
+
+And where it says <path to your directory> you have to insert the absolute path for your working directory, and leave the rest of the path untouched. 
 
 ## How to host the Flask application on your localhost
 
